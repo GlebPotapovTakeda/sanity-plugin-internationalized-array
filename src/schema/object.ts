@@ -28,11 +28,6 @@ export default (config: ObjectFactoryConfig): FieldDefinition<'object'> => {
           defineField({
             name: 'value',
             type,
-            components: {
-              // TODO: Address this typing issue with the inner object
-              // @ts-expect-error
-              field: InternationalizedField,
-            },
           })
         : // Pass in the configured options, but overwrite the name
           {
